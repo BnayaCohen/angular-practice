@@ -1,0 +1,11 @@
+<article class="chart-preview" *ngIf="data">
+  <google-chart
+  [title]="chart.title"
+  [type]="chart.type"
+  [data]="chart.data"
+  [columns]="chart.columnNames"
+  [options]="chart.options"
+>
+</google-chart>
+  <p>{{data.description}}</p>
+</article>
