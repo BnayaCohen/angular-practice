@@ -1,5 +1,5 @@
-<section className='charts-page'>
-<chart [data]="marketPrice"></chart>
+<section className='charts-page' *ngIf="marketPrice && confirmedTransactions">
+<chart [bitcoinData]="marketPrice"></chart>
 
-<chart [data]="confirmedTransactions"></chart>
+<chart [bitcoinData]="confirmedTransactions"></chart>
 </section>

@@ -1,3 +1,3 @@
-export interface ContactFilter{
+export interface ContactFilter {
   term:string
 }

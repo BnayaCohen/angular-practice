@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { GoogleChartsModule } from 'angular-google-charts';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
@@ -12,6 +14,8 @@ import { ContactDetailsPageComponent } from './pages/contact-details-page/contac
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { ChartComponent } from './cmps/chart/chart.component';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
+import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,16 @@ import { StatisticsPageComponent } from './pages/statistics-page/statistics-page
     ContactDetailsPageComponent,
     ContactFilterComponent,
     ChartComponent,
-    StatisticsPageComponent
+    StatisticsPageComponent,
+    ContactEditComponent,
+    AppHeaderComponent
   ],
   imports: [
     GoogleChartsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

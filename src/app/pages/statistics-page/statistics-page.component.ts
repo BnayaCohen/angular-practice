@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { BitcoinService } from 'src/app/services/bitcoin.service';
 
 @Component({
@@ -8,12 +9,22 @@ import { BitcoinService } from 'src/app/services/bitcoin.service';
 })
 export class StatisticsPageComponent implements OnInit {
 
-  constructor() { }
-  marketPrice!: any
-  confirmedTransactions!: any
+  constructor(private bitcoinService: BitcoinService) { }
+  marketPrice!: { name: string, description: string, values: any }
+  confirmedTransactions!: { name: string, description: string, values: any }
 
   async ngOnInit() {
-    this.marketPrice = await BitcoinService.getMarketPrice()
-    this.confirmedTransactions = await BitcoinService.getConfirmedTransactions()
+    this.marketPrice = this.prepData(await lastValueFrom(this.bitcoinService.getMarketPrice()))
+    this.confirmedTransactions = this.prepData(await lastValueFrom(this.bitcoinService.getConfirmedTransactions()))
+  }
+
+  prepData(BitcoinData: { name: string, description: string, values: any }) {
+    const { name, description, values } = BitcoinData
+    const bitcoinValues: number[] = values.map((value: { x: number, y: number }) => [value.x,value.y])
+    return {
+      name,
+      description,
+      values: bitcoinValues,
+    }
   }
 }

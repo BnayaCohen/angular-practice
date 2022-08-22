@@ -13,8 +13,6 @@ export class ContactPageComponent implements OnInit {
   constructor(private contactService: ContactService) { }
   contacts!: Contact[]
   contacts$!: Observable<Contact[]>
-  subscription!: Subscription
-  selectedContactId!: string
 
   ngOnInit(): void {
     this.contactService.loadContacts()
@@ -23,9 +21,5 @@ export class ContactPageComponent implements OnInit {
 
   onRemoveContact(contactId: string) {
     this.contactService.deleteContact(contactId)
-  }
-
-  onSelectContactId(contactId: string) {
-    this.selectedContactId = contactId
   }
 }

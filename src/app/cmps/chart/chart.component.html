@@ -1,4 +1,4 @@
-<article class="chart-preview" *ngIf="data">
+<article class="chart-preview" *ngIf="chart">
   <google-chart
   [title]="chart.title"
   [type]="chart.type"
@@ -7,5 +7,5 @@
   [options]="chart.options"
 >
 </google-chart>
-  <p>{{data.description}}</p>
+  <p>{{bitcoinData.description}}</p>
 </article>

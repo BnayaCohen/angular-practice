@@ -16,23 +16,25 @@ import {
 export class ChartComponent implements OnInit {
 
   constructor() { }
-  @Input() data!: any
+  @Input() bitcoinData!: { name: string, description: string, values: any }
   chart!: any
 
   ngOnInit(): void {
+    
     this.chart = {
-      title: this.data.name,
-      type: ChartType.BarChart,
-      data: this.data.values,
+      title: this.bitcoinData.name,
+      type: ChartType.AreaChart,
+      data: this.bitcoinData.values,
       columnNames: ['Element', 'Density'],
       options: {
         animation: {
-          duration: 250,
+          duration: 450,
           easing: 'ease-in-out',
           startup: true
         }
       },
     }
+    console.log(this.chart);
   }
 
 }

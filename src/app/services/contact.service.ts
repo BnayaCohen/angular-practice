@@ -155,7 +155,11 @@ export class ContactService {
         const contact = this._contactsDb.find(contact => contact._id === id)
 
         //return an observable
-        return contact ? of(contact) : throwError(() => `Contact id ${id} not found!`)
+        return contact ? of(contact) : of()
+    }
+
+    public getEmptyContact() {
+        return { name: '', email: '', phone: '' }
     }
 
     public deleteContact(id: string) {

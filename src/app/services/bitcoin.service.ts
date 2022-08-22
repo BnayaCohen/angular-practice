@@ -1,36 +1,29 @@
-import axios from 'axios'
+import { Injectable } from '@angular/core'
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
-export const BitcoinService = {
-  getRate,
-  getMarketPrice,
-  getConfirmedTransactions,
-}
+@Injectable({
+  providedIn: 'root'
+})
+export class BitcoinService {
 
-async function getRate(coins: number) {
-  const { data } = await axios.get(`https://blockchain.info/tobtc?currency=USD&value=${coins}`)
-  return data
-}
+  constructor(private http: HttpClient) { }
 
-async function getMarketPrice() {
-  let res: any = await axios.get(`https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true`)
-  const { name, description, values } = res.data
-  const bitcoinValues: number[] = values.map((value: { x: number, y: number }) => value.y)
-  const resDetails = {
-    name,
-    description,
-    values: bitcoinValues,
+  public getRate(coins: number) {
+    return this.http.get<number>(`https://blockchain.info/tobtc?currency=USD&value=${coins}`)
+      .pipe(
+        map(res => res)
+      )
   }
-  return resDetails
-}
 
-async function getConfirmedTransactions() {
-  const res: any = await axios.get(`https://api.blockchain.info/charts/n-transactions?timespan=5months&format=json&cors=true`)
-  const { name, description, values } = res.data
-  const bitcoinValues: number[] = values.map((value: { x: number, y: number }) => value.y)
-  const resDetails = {
-    name,
-    description,
-    values: bitcoinValues,
+  public getMarketPrice(): Observable<any> {
+    return this.http.get(`https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true`)
+      .pipe(map(res => res))
   }
-  return resDetails
+
+  public getConfirmedTransactions(): Observable<any> {
+    return this.http.get(`https://api.blockchain.info/charts/n-transactions?timespan=5months&format=json&cors=true`)
+      .pipe(map(res => res))
+  }
 }

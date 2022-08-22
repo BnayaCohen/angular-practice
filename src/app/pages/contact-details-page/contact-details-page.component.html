@@ -1,6 +1,7 @@
 <section *ngIf="contact" class="contact-details">
-  <img src="https://robohash.org/{{contact._id}}?set=set4" alt="">
+  <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
   <p>Name: {{contact.name}}</p>
   <p>Phone: {{contact.phone}}</p>
   <p>Email: {{contact.email}}</p>
+  <button (click)="onBack()">Back</button>
 </section>
