@@ -35,7 +35,7 @@ export class UserService {
 
   public addMove(contact: Contact, amount: number): void {
     let newMove = new Move()
-    newMove.toId = this.utilService.makeId()
+    newMove.toId = contact._id
     newMove.to = contact.name
     newMove.at = Date.now()
     newMove.amount = amount

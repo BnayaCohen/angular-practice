@@ -186,6 +186,7 @@ export class ContactService {
         const newContact = new Contact(contact.name, contact.email, contact.phone);
         if (typeof newContact.setId === 'function') newContact.setId(getRandomId());
         this._contactsDb.push(newContact)
+        
         this._contacts$.next(this._sort(this._contactsDb))
     }
 

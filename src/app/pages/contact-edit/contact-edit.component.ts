@@ -16,18 +16,16 @@ export class ContactEditComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  contact!:Contact
+  contact!: Contact
 
   ngOnInit(): void {
     this.route.data.subscribe(({ contact }) => {
       this.contact = contact || this.contactService.getEmptyContact() as Contact
-      console.log(this.contact);
-      
-  })
+    })
   }
 
-  async onSaveContact(){
+  async onSaveContact() {
     this.contactService.saveContact({ ...this.contact })
     this.router.navigateByUrl('/contact')
-}
+  }
 }

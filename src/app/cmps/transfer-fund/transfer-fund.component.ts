@@ -34,6 +34,6 @@ export class TransferFundComponent implements OnInit,OnDestroy {
     } else {
       this.userService.addMove(this.contact, this.amount);
     }
-    this.router.navigate(['contacts/', this.contact._id])
+    this.router.navigate(['contact/', this.contact._id])
   }
 }

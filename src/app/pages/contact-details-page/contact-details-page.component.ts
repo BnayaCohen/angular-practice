@@ -22,6 +22,7 @@ export class ContactDetailsPageComponent implements OnInit {
 
   @Input() contactId!: string
   contact!: Contact
+  user!: User
   subscription!: Subscription
   movesList!: Move[]
 
@@ -29,8 +30,11 @@ export class ContactDetailsPageComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.contact = data['contact']
     })
-    let user: User = await lastValueFrom(this.userService.getUser())
-    this.movesList = user.moves.filter(move => move.toId === this.contact._id)
+
+    this.userService.user$.subscribe(user => {
+      this.user = user
+      this.movesList = this.user.moves.filter(move => move.toId === this.contact._id)
+    })
   }
 
   onBack() {

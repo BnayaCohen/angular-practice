@@ -9,5 +9,5 @@
   <button (click)="onBack()">Back</button>
 
   <transfer-fund [contact]="contact"></transfer-fund>
-  <moveslist [title]="'Last moves'" [movesList]="movesList"></moveslist>
+  <moves-list *ngIf="movesList" [title]="'Last moves'" [movesList]="movesList"></moves-list>
 </section>
