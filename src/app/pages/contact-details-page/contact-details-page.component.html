@@ -3,5 +3,11 @@
   <p>Name: {{contact.name}}</p>
   <p>Phone: {{contact.phone}}</p>
   <p>Email: {{contact.email}}</p>
+  <a [routerLink]="['/contacts/edit', contact._id]" class="btn">
+    Edit
+  </a>
   <button (click)="onBack()">Back</button>
+
+  <transfer-fund [contact]="contact"></transfer-fund>
+  <moveslist [title]="'Last moves'" [movesList]="movesList"></moveslist>
 </section>

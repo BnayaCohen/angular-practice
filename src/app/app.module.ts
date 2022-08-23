@@ -16,6 +16,9 @@ import { ChartComponent } from './cmps/chart/chart.component';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
+import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
     ChartComponent,
     StatisticsPageComponent,
     ContactEditComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    SignupComponent,
+    TransferFundComponent,
+    MovesListComponent
   ],
   imports: [
     GoogleChartsModule,

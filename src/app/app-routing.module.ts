@@ -5,19 +5,25 @@ import { ContactDetailsPageComponent } from './pages/contact-details-page/contac
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { ContactResolver } from './services/contact.resolver';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePageComponent
+    component: HomePageComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: 'contact', component: ContactPageComponent, children: [
-      { path: 'edit/:id',
-       component: ContactEditComponent ,
-       resolve: { contact: ContactResolver}}, 
+    path: 'contact', component: ContactPageComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'edit/:id',
+        component: ContactEditComponent,
+        resolve: { contact: ContactResolver }
+      },
       { path: 'edit', component: ContactEditComponent }
     ]
   },
@@ -25,12 +31,15 @@ const routes: Routes = [
     path: 'contact/:id',
     component: ContactDetailsPageComponent,
     resolve: { contact: ContactResolver },
-    canActivate: [AuthGuard]
   },
   {
     path: 'stats',
     component: StatisticsPageComponent
-  }
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
+  },
 ]
 
 @NgModule({

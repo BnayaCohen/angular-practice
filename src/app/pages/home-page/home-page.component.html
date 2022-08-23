@@ -1,5 +1,6 @@
-<section class="home-page">
-  <h1>Welcome Home</h1>
+<section class="home-page" *ngIf="user$ | async">
+  <h1>Welcome Home {{user.name}}</h1>
   <h3>{{user.coins}}</h3>
   <h3>BTC: {{bitcoinRate | async}}$</h3>
+  <moveslist [title]="Your last 3 moves" [movesList]="movesList"></moveslist>
 </section>

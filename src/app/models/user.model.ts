@@ -1,10 +1,12 @@
+import { Move } from "./move.model"
+
 export class User {
 
   constructor(
       public _id?: string,
       public name: string = '',
-      public coins: number = 0,
-      public moves: object[] = []) {
+      public coins: number = 150,
+      public moves: Move[] = []) {
   }
 
   setId?(id: string = 'r101') {
