@@ -2,8 +2,17 @@
   <h1>Bitcoin</h1>
 
   <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-    <a routerLink="/contact" routerLinkActive="active">Contacts</a>
-    <a routerLink="/stats" routerLinkActive="active">Statistics</a>
+    <a exact class='main-nav-item' routerLink="/"  routerLinkActive="selected">
+      Home
+  </a>
+  <a class='main-nav-item' routerLink="/contact" routerLinkActive="selected">
+      Contacts
+  </a>  
+  <a class='main-nav-item' routerLink="/signup" routerLinkActive="selected">
+      Signup
+  </a>  
+  <a class='main-nav-item' routerLink="/stats" routerLinkActive="selected">
+      Statistics
+  </a>  
 </nav>
 </header>

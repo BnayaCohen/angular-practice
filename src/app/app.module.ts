@@ -19,6 +19,7 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MovesListComponent } from './cmps/moves-list/moves-list.component';
+import { FilterArrPipe } from './pipes/filter-arr.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MovesListComponent } from './cmps/moves-list/moves-list.component';
     AppHeaderComponent,
     SignupComponent,
     TransferFundComponent,
-    MovesListComponent
+    MovesListComponent,
+    FilterArrPipe
   ],
   imports: [
     GoogleChartsModule,
