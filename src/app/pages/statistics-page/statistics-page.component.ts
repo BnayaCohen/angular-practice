@@ -20,7 +20,7 @@ export class StatisticsPageComponent implements OnInit {
 
   prepData(BitcoinData: { name: string, description: string, values: any }) {
     const { name, description, values } = BitcoinData
-    const bitcoinValues: number[] = values.map((value: { x: number, y: number }) => [value.x,value.y])
+    const bitcoinValues: number[] = values.map((value: { x: number, y: number }) => [value.x / 1000000, value.y / 1000])
     return {
       name,
       description,

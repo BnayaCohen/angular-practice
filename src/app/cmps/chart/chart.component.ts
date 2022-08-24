@@ -20,21 +20,21 @@ export class ChartComponent implements OnInit {
   chart!: any
 
   ngOnInit(): void {
-    
+
     this.chart = {
       title: this.bitcoinData.name,
       type: ChartType.AreaChart,
       data: this.bitcoinData.values,
-      columnNames: ['Element', 'Density'],
+      columnNames: ['Element', 'Value'],
       options: {
         animation: {
           duration: 450,
           easing: 'ease-in-out',
-          startup: true
-        }
+          startup: true,
+        },
+        colors: ['#363739'], is3D: true
       },
     }
-    console.log(this.chart);
   }
 
 }
