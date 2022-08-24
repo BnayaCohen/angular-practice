@@ -1,0 +1,32 @@
+.transfer-fund {
+  text-align: center;
+  color: white;
+  padding: 12px;
+  padding-bottom: 26px;
+  margin-top: 16px;
+  border-radius: 4px;
+  background: url(https://bitcoin.org/img/hero/hero-bg.svg?1528322191) bottom no-repeat;
+
+  h1 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin-right: 4px;
+    font-size: 1.2rem;
+  }
+
+  input {
+    height: 30px;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 200px;
+    background-color: #ffffff90;
+  }
+
+  .btn {
+    height: 30px;
+    padding: 0 14px;
+  }
+}

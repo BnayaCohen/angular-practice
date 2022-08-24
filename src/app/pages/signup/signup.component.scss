@@ -1,0 +1,26 @@
+.signup-page {
+  text-align: center;
+  border: 1px solid #DADADA;
+  padding: 15px;
+
+  h2{
+    color: #FF7E00;
+    margin-bottom: 4px;
+  }
+
+  img {
+    max-width: 375px;
+    margin-top: 8px;
+  }
+
+  input{
+    margin-top: 4px;
+    font-size: 1.1rem;
+    background-color: #DADADA;
+  }
+
+  button{
+    display: block;
+    margin: 10px auto;
+  }
+}

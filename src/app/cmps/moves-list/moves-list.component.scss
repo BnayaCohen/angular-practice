@@ -1,0 +1,38 @@
+.moves-list {
+  text-align: center;
+  min-width: 200px;
+  max-width: 250px;
+  margin: 12px auto;
+
+  h1 {
+    border: 1px solid #F7931A;
+    border-bottom: none;
+    margin: 0mm;
+  }
+
+  span{
+    font-weight: 600;
+    color: #F7931A;
+  }
+
+  .move-preview {
+    border: 1px solid #F7931A;
+    border-bottom: none;
+    padding-bottom: 4px;
+
+    h4 {
+      font-weight: 600;
+      letter-spacing: .3px;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: .9rem;
+      line-height: 17px
+    }
+
+    &:last-child {
+      border: 1px solid #F7931A;
+    }
+  }
+}

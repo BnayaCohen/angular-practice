@@ -30,6 +30,7 @@ export class ContactDetailsPageComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.contact = data['contact']
     })
+console.log(this.contact);
 
     this.userService.user$.subscribe(user => {
       this.user = user
