@@ -1,12 +1,7 @@
 .contact-list {
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
-  .contact-preview{
-    width: 20vw;
-  }
+  min-width: 370px;
+  margin-top: 8px;
 }

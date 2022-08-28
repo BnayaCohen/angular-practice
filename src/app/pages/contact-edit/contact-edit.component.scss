@@ -1,4 +1,14 @@
 .contact-edit {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background-color: #0b1426;
+padding: 80px;
+border-radius: 10px;
+text-align: center;
+
+
   form {
     display: flex;
     flex-direction: column;
@@ -8,14 +18,14 @@
       text-align: left;
       width: 230px;
       border-radius: 5px;
-      outline: #F7931A;
-      background-color: #00000009;
-      border: 1px solid #F7931A;
+      outline: #4e586e;
+      background-color: #fff;
+      border: 1px solid #4e586e;
       padding: 5px 8px;
       margin-bottom: 8px;
 
       &:focus {
-        border: 1px solid #b06810;
+        border: 1px solid #4e586e;
       }
     }
   }
