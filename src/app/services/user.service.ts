@@ -17,19 +17,15 @@ export class UserService {
 
   constructor(private utilService: UtilService) { }
 
-  public getUser() {
-    return this.user$
-  }
-
   public signup(name: string): void {
-    let user = this.utilService.load(this.KEY);
-    if (!user) {
+    // let user = this.utilService.load(this.KEY);
+    // if (!user) {
       let newUser = new User()
       newUser.name = name
       newUser._id = this.utilService.makeId()
       this.utilService.store(this.KEY, newUser);
       this._user = newUser;
-    }
+    // }
     this._user$.next(this._user);
   }
 

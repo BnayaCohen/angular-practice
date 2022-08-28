@@ -1,13 +1,13 @@
 <section class="contact-preview">
-  <section  class="info">
-    <a [routerLink]="['/contact', contact._id]">Details</a>
-      <section class="data">
-          <p>Name: {{contact.name}}</p>
-      </section>
-      <section class="actions">
-          <button (click)="onRemoveContact()" class="remove-btn">X</button>
-      </section>
-      <a routerLink="/contact/edit/{{contact._id}}">Edit</a>
+  <section>
+    <img class="contact-img" src="https://robohash.org/{{contact._id}}?set=set2" alt="">
+    <section class="data">
+      <p>{{contact.name}}</p>
     </section>
-  <img src="https://robohash.org/{{contact._id}}?set=set2" alt="">
+    <section class="actions">
+      <button (click)="onRemoveContact()" class="btn">X</button>
+      <a class="btn" [routerLink]="['/contact', contact._id]">Details</a>
+      <a class="btn" routerLink="/contact/edit/{{contact._id}}">Edit</a>
+    </section>
+    </section>
 </section>

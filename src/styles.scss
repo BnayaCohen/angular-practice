@@ -137,19 +137,19 @@ $wide-breakpoint: 1080px;
   font-family: inherit;
   cursor: pointer;
   display: inline-block;
-  padding: 12px 18px;
+  background: linear-gradient(90deg, rgb(17, 153, 250) 0%, rgb(17, 208, 250) 100%) 0% 0% / cover no-repeat;
+  padding: 10px 16px;
   font-weight: 600;
   font-size: .8em;
   color: #fff;
   border: none;
-  background: #FF9500;
-  border-radius: 2px;
+  border-radius: 3px;
   letter-spacing: 1.5px;
   margin: 4px;
 
   &:hover {
     text-decoration: none;
-    background: #F9A136;
+    background: linear-gradient(90deg, rgb(66, 156, 220) 0%, rgb(59, 207, 240) 100%) 0% 0% / cover no-repeat;
   }
 
   * {

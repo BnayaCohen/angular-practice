@@ -1,26 +1,29 @@
 .signup-page {
+  margin-top: 15vh;
   text-align: center;
-  border: 1px solid #DADADA;
-  padding: 15px;
-
-  h2{
-    color: #FF7E00;
-    margin-bottom: 4px;
+  background-color: #0b1426;
+  border-radius: 20px;
+  padding:40px 30px;
+  width: 100%;
+  box-shadow: 0 0 10px 0px #2a2a2a;
+  
+  h2 {
+    color: inherit;
+    margin-bottom: 20px;
   }
 
-  img {
-    max-width: 375px;
+  input {
     margin-top: 8px;
-  }
-
-  input{
-    margin-top: 4px;
     font-size: 1.1rem;
-    background-color: #DADADA;
+    padding-bottom: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: 0;
   }
 
-  button{
+  button {
     display: block;
-    margin: 10px auto;
+    margin: 20px auto 5px;
   }
 }
