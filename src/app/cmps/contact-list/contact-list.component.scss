@@ -4,6 +4,29 @@
   gap: 8px;
   margin: 0 auto;
   margin-top: 8px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: em(8px);
+  }
+
+  // background
+  &::-webkit-scrollbar-track {
+    background: #091e4214;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #00000026;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: block;
+    height: 6px;
+    width: 6px;
+  }
 }
 
 @media (min-width: 916px) {
