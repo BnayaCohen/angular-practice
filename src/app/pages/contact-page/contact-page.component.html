@@ -4,6 +4,5 @@
   <a class="btn" routerLink="/contact/edit">Add Contact</a>
 
   <contact-list (onRemove)="onRemoveContact($event)" [contacts]="contacts$ | async"></contact-list>
-  <div class="skeleton-w6h8m0mipis"><div *ngIf="false"></div></div>
 </section>
 <router-outlet></router-outlet>
