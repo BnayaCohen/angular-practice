@@ -1,10 +1,10 @@
 <article class="moves-list">
   <h1>{{movesList.length ? title : 'No moves yet'}}</h1>
   <ul class="clean-list">
-      <li class="move-preview flex column" *ngFor="let move of movesList">
-        <h4>To: {{move.to}}</h4>
-        <p>At: {{move.at | date}}</p>
-        <p>Amount: <span>{{move.amount}}</span></p>
-      </li>
+    <li class="move-preview flex column" *ngFor="let move of movesList">
+      <h4>To: {{move.to}}</h4>
+      <p>At: {{move.at | date:'M/d/yy, h:mm a'}}</p>
+      <p>Amount: <span>{{move.amount}}</span></p>
+    </li>
   </ul>
 </article>

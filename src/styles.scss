@@ -105,6 +105,10 @@ $wide-breakpoint: 1080px;
   }
 }
 
+.app-header{
+  z-index: 1;
+}
+
 // Positioning
 .flex {
   display: flex;

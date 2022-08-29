@@ -1,6 +1,8 @@
 <article class="transfer-fund">
-  <h1>Transfer coins to {{contact.name}}:</h1>
-    <p>Amount: </p>
-    <input type="number" placeholder="0" [(ngModel)]="amount" />
-    <button class="btn" (click)="onTransferCoins()">Transfer</button>
+  <h1>Transfer coins to {{contact.name}}</h1>
+    <p>Amount:</p>
+    <div class="flex align-center">
+      <input type="number" placeholder="0" [(ngModel)]="amount" />
+      <button class="btn" (click)="onTransferCoins()">Transfer</button>
+    </div>
 </article>

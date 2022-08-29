@@ -1,38 +1,39 @@
 .moves-list {
   text-align: center;
   min-width: 200px;
-  max-width: 250px;
+  max-width: 320px;
   margin: 12px auto;
 
   h1 {
-    border: 1px solid #F7931A;
-    border-bottom: none;
-    margin: 0mm;
+    border: none;
+    background-color: #0b1426;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    padding: 4px;
+    padding-bottom: 6px;
   }
-
+  
   span{
     font-weight: 600;
-    color: #F7931A;
+    color: #65b8f3;
   }
-
+  
   .move-preview {
-    border: 1px solid #F7931A;
-    border-bottom: none;
-    padding-bottom: 4px;
-
+    background-color: #0b1426;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 6px 0;
+    
     h4 {
       font-weight: 600;
       letter-spacing: .3px;
       margin-bottom: 2px;
     }
-
+    
     p {
       font-size: .9rem;
-      line-height: 17px
-    }
-
-    &:last-child {
-      border: 1px solid #F7931A;
+      line-height: 17px;
+      margin-top: 4px;
     }
   }
 }

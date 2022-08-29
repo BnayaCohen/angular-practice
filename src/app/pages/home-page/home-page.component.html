@@ -1,6 +1,8 @@
 <section class="home-page" *ngIf="user">
-  <h1>Welcome Home {{user.name}}</h1>
-  <h3>{{user.coins}}</h3>
+  <img src="../../../assets/img/hero.jpg" alt="">
+  <h1>Showcase your Crypto</h1>
+  <h2>Welcome {{user.name}}</h2>
+  <h3>Coins: {{user.coins}}</h3>
   <h3>BTC: {{bitcoinRate | async}}$</h3>
   <moves-list [title]="'Your last 3 moves'" [movesList]="movesList"></moves-list>
 </section>
