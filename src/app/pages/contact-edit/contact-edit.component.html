@@ -1,6 +1,7 @@
-<section *ngIf="contact" class="contact-edit">
-  <h2>{{contact._id ? 'Edit':'Add'}} Contact</h2>
-  <form (ngSubmit)="onSaveContact()">
+<div class="black-screen" routerLink="/contact"></div>
+  <section *ngIf="contact" class="contact-edit">
+    <h2>{{contact._id ? 'Edit':'Add'}} Contact</h2>
+    <form (ngSubmit)="onSaveContact()">
       <label for="name">Name</label>
       <input [(ngModel)]="contact.name" type="text" name="name" id="name">
 
@@ -9,8 +10,7 @@
 
       <label for="email">Email</label>
       <input [(ngModel)]="contact.email" type="text" name="email" id="email">
-
-      <button class="btn">Save</button>
-  </form>
-  <button class="btn">Back</button>
-</section>
+    </form>
+    <button class="btn" routerLink="/contact">Back</button>
+    <button class="btn" (click)="onSaveContact()">Save</button>
+  </section>

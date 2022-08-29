@@ -11,6 +11,11 @@ import { ContactResolver } from './services/contact.resolver';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomePageComponent,
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'home',
     component: HomePageComponent,
     canActivate: [AuthGuard],

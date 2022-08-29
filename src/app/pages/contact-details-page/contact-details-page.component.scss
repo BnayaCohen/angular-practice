@@ -2,7 +2,11 @@
   text-align: center;
 
   img {
-    margin-top: -22px;
+    margin: -22px 0;
+  }
+
+  p{
+    font-weight: 400;
   }
 
   h1,
@@ -12,6 +16,5 @@
 
   button {
     margin-top: 14px;
-
   }
 }

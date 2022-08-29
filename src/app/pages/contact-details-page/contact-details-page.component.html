@@ -1,12 +1,11 @@
 <section *ngIf="contact" class="contact-details">
-  <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
-  <p>Name: {{contact.name}}</p>
-  <p>Phone: {{contact.phone}}</p>
-  <p>Email: {{contact.email}}</p>
-  <a [routerLink]="['/contacts/edit', contact._id]" class="btn">
-    Edit
-  </a>
-  <button (click)="onBack()">Back</button>
+  <img src="https://robohash.org/{{contact._id}}?set=set3" alt="">
+  <p><span>Name: </span>{{contact.name}}</p>
+  <p><span>Phone: </span>{{contact.phone}}</p>
+  <p><span>Email: </span>{{contact.email}}</p>
+
+  <button class="btn" (click)="onBack()">Back</button>
+  <a [routerLink]="['/contact/edit', contact._id]" class="btn">Edit</a>
 
   <transfer-fund [contact]="contact"></transfer-fund>
   <moves-list *ngIf="movesList" [title]="'Last moves'" [movesList]="movesList"></moves-list>
