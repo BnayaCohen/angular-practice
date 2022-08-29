@@ -2,6 +2,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  min-width: 370px;
+  margin: 0 auto;
   margin-top: 8px;
+}
+
+@media (min-width: 916px) {
+  .contact-list {
+    width: 900px;
+  }
+}
+
+@media (max-width: 916px) {
+  .contact-list {
+    width: 610px;
+  }
+}
+
+@media (max-width: 668px) {
+  .contact-list {
+    width: 330px;
+  }
 }

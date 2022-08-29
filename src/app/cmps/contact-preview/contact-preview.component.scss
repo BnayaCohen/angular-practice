@@ -4,7 +4,6 @@
     border-radius: 8px;
     box-shadow: 0 4px 40px rgb(0 0 0 / 10%);
     cursor: pointer;
-    width: 230px;
 
     &:hover {
         box-shadow: 0 4px 40px rgb(0 0 0 / 30%);
@@ -26,7 +25,7 @@
     .actions {
         margin-top: 4px;
         display: flex;
-        justify-content:center;
+        justify-content: center;
         direction: rtl;
         transition: all 0.6s;
         margin: 0 auto;
@@ -41,5 +40,22 @@
     &:hover .actions .btn {
         background: linear-gradient(90deg, rgb(17, 153, 250) 0%, rgb(17, 208, 250) 100%) 0% 0% / cover no-repeat;
     }
+}
 
+@media (min-width: 916px) {
+    .contact-preview {
+        width: 281px;
+    }
+}
+
+@media (max-width: 916px) {
+    .contact-preview {
+        width: 300px;
+    }
+}
+
+@media (max-width: 668px) {
+    .contact-preview {
+        width: 330px;
+    }
 }
