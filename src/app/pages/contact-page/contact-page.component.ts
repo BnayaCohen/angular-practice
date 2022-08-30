@@ -15,8 +15,10 @@ export class ContactPageComponent implements OnInit {
   contacts$!: Observable<Contact[]>
 
   ngOnInit(): void {
-    this.contactService.loadContacts()
-    this.contacts$ = this.contactService.contacts$
+    setTimeout(()=>{
+      this.contactService.loadContacts()
+      this.contacts$ = this.contactService.contacts$
+    },1500)
   }
 
   onRemoveContact(contactId: string) {
